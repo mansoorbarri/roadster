@@ -1,7 +1,7 @@
 baseurl = "https://mainroad-v2.pages.dev"
 title = "Mainroad V2"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
+pagination.pagerSize = "10" # Number of posts per page
 theme = "mainroad-v2" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
