@@ -5,6 +5,10 @@ pagination.pagerSize = "10" # Number of posts per page
 theme = "mainroad-v2" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
+
+[markup.goldmark.renderer]
+  unsafe = true
+
 [Author]
   name = "John Doe"
   bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
