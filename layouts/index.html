@@ -5,10 +5,15 @@
 		{{ . }}
 	</div>
 	{{- end }}
-	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+	
+	<!-- Get parameter from hugo.toml and if not set using the general pagination setting as default-->
+	{{ $paginateIndex := (.Site.pagination.index | default .Site.pagination.pagerSize) }}
+	<!-- Create a paginator for the first $paginateIndex pages from sections specified in .Site.Params.mainSections */-->
+	{{ $paginator := .Paginate (first $paginateIndex (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)) }}
 	{{- range $paginator.Pages }}
 		{{- .Render "summary" }}
 	{{- end }}
+
 	{{- if and (eq $paginator.TotalNumberOfElements 0) (not $.Content) }}
 		<div class="warning">
 			{{ partial "svg/files.svg" (dict "class" "warning__icon") }}

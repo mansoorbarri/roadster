@@ -36,7 +36,8 @@ theme = "roadster"
 
 # Configure Pagination. See https://gohugo.io/templates/pagination/#configuration
 [pagination]
-  pagerSize = 10 # (int) The number of pages per pager. Default is 10
+  pagerSize = 10 # (int) The number of articles per pager. Default is 10
+  #index = 10 # (int) The number of articles on the index-page per pager. Default is pagerSize from above. 
 
 [services]
   [services.googleAnalytics]
@@ -67,6 +68,7 @@ theme = "roadster"
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   customCSS = ["css/custom.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
+  
 
 [params.author]
   name = "John Doe"
