@@ -65,7 +65,7 @@
 - id: footer_credits
   translation:
     "Gerado com <a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> com o tema \
-    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">roadster</a>."
+    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">Roadster>/a>."
 
 # 404
 - id: 404_title

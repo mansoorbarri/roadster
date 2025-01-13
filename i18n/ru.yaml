@@ -65,7 +65,7 @@
 - id: footer_credits
   translation:
     "Сгенерировано с использованием <a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> \
-    и темы <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">roadster</a>."
+    и темы <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">Roadster>/a>."
 
 # 404
 - id: 404_title

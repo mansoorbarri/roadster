@@ -105,4 +105,4 @@ Please respect our Pull Request Acceptance Criteria. For larger changes, you wil
 
 ## License
 
-By contributing to roadster, you agree that your contributions will be licensed under [GPLv2 License](LICENSE.md).
+By contributing to Roadster, you agree that your contributions will be licensed under [GPLv2 License](LICENSE.md).

@@ -65,7 +65,7 @@
 - id: footer_credits
   translation:
     "<a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> және \
-    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">roadster</a> тақырыптар \
+    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">Roadster>/a> тақырыптар \
     көмегімен жасалған."
 
 # 404

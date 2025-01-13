@@ -65,7 +65,7 @@
 - id: footer_credits
   translation:
     "Létrehozva <a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> és \
-    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">roadster</a> témával."
+    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">Roadster>/a> témával."
 
 # 404
 - id: 404_title

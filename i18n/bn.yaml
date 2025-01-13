@@ -65,7 +65,7 @@
 - id: footer_credits
   translation:
     "<a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> এবং \
-    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">roadster</a> থিম দ্বারা তৈরি।"
+    <a href=\"https://github.com/mansoorbarri/roadster/\" rel=\"nofollow noopener\" target=\"_blank\">Roadster>/a> থিম দ্বারা তৈরি।"
 
 # 404
 - id: 404_title
