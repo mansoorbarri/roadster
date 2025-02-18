@@ -1,26 +1,26 @@
 {{- $taxonomy := "authors" }}
 {{- with .GetTerms $taxonomy }}
 <div class="authorbox clearfix">
-    {{- range $k, $author := . }}
-        <div class="authorbox__singleAuthor">
-            <figure class="authorbox__avatar">
-                {{ $avatar := .Resources.GetMatch "portrait.*" | default (resources.Get "images/avatar.png") }}
-                {{ with $avatar.Fill "120x120 webp" }}
-                <img src="{{ .RelPermalink }}" width="120" height="120" alt="{{ $.Title }}'s portrait"
-                    class="author-profile__image">
-                {{ end }}
-            </figure>
-            <div class="authorbox__header">
-                <span class="authorbox__name">
-                    <a href="{{ $author.RelPermalink }}">About {{ $author.Title }}</a>
-                </span>
-            </div>
-            {{- with $author.Params.bio }}
-            <div class="authorbox__description">
-                {{ . | markdownify }}
-            </div>
-            {{- end }}
-        </div>
-    {{- end }}
+	{{- range $k, $author := . }}
+		<div class="authorbox__singleAuthor">
+			<figure class="authorbox__avatar">
+				{{ $avatar := .Resources.GetMatch "portrait.*" | default (resources.Get "images/avatar.png") }}
+				{{ with $avatar.Fill "120x120 webp" }}
+				<img src="{{ .RelPermalink }}" width="120" height="120" alt="{{ $.Title }}'s portrait"
+					class="author-profile__image">
+				{{ end }}
+			</figure>
+			<div class="authorbox__header">
+				<span class="authorbox__name">
+					<a href="{{ $author.RelPermalink }}">About {{ $author.Title }}</a>
+				</span>
+			</div>
+			{{- with $author.Params.bio }}
+			<div class="authorbox__description">
+				{{ . | markdownify }}
+			</div>
+			{{- end }}
+		</div>
+	{{- end }}
 </div>
 {{- end }}

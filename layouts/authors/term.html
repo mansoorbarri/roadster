@@ -1,71 +1,71 @@
 {{ define "main" }}
 <article class="author-profile">
-    <header class="author-profile__header">
-        <div class="author-profile__intro">
-            {{ with .Resources.GetMatch "portrait.*" }}
-                {{ with .Fill "120x120 webp" }}
-                <figure class="author-profile__portrait">
-                    <img src="{{ .RelPermalink }}" 
-                         width="{{ .Width }}" 
-                         height="{{ .Height }}" 
-                         alt="{{ $.Title }}'s portrait"
-                         class="author-profile__image">
-                </figure>
-                {{ end }}
-            {{ end }}
-            <h1 class="author-profile__title">{{ .Title }}</h1>
-        </div>
-        
-        <div class="author-profile__bio">
-            {{ .Content }}
-        </div>
-    </header>
+	<header class="author-profile__header">
+		<div class="author-profile__intro">
+			{{ with .Resources.GetMatch "portrait.*" }}
+				{{ with .Fill "120x120 webp" }}
+				<figure class="author-profile__portrait">
+					<img src="{{ .RelPermalink }}"
+						 width="{{ .Width }}"
+						 height="{{ .Height }}"
+						 alt="{{ $.Title }}'s portrait"
+						 class="author-profile__image">
+				</figure>
+				{{ end }}
+			{{ end }}
+			<h1 class="author-profile__title">{{ .Title }}</h1>
+		</div>
 
-    {{ with .Params.social }}
-    <div class="widget-social widget">
-        <h4 class="widget-social__title widget__title">Connect</h4>
-        <div class="widget-social__content widget__content">
-            {{ range . }}
-                <div class="widget-social__item widget__item">
-                    <a class="widget-social__link widget__link btn" 
-                       title="{{ .service }}" 
-                       rel="noopener noreferrer" 
-                       href="{{ .link }}" 
-                       target="_blank">
-                        {{ $iconName := lower .service }}
-                        {{ if eq $iconName "x" }}
-                            {{ partial "svg/x.svg" (dict "class" "widget-social__link-icon") }}
-                        {{ else }}
-                            {{ partial (printf "svg/%s.svg" $iconName) (dict "class" "widget-social__link-icon") }}
-                        {{ end }}
-                        <span>{{ .service }}</span>
-                    </a>
-                </div>
-            {{ end }}
+		<div class="author-profile__bio">
+			{{ .Content }}
+		</div>
+	</header>
 
-            {{ with $.Params.contact.email }}
-            <div class="widget-social__item widget__item">
-                <a class="widget-social__link widget__link btn" 
-                   title="Email" 
-                   href="mailto:{{ . }}">
-                    {{ partial "svg/email.svg" (dict "class" "widget-social__link-icon") }}
-                    <span>Email</span>
-                </a>
-            </div>
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
+	{{ with .Params.social }}
+	<div class="widget-social widget">
+		<h4 class="widget-social__title widget__title">Connect</h4>
+		<div class="widget-social__content widget__content">
+			{{ range . }}
+				<div class="widget-social__item widget__item">
+					<a class="widget-social__link widget__link btn"
+					   title="{{ .service }}"
+					   rel="noopener noreferrer"
+					   href="{{ .link }}"
+					   target="_blank">
+						{{ $iconName := lower .service }}
+						{{ if eq $iconName "x" }}
+							{{ partial "svg/x.svg" (dict "class" "widget-social__link-icon") }}
+						{{ else }}
+							{{ partial (printf "svg/%s.svg" $iconName) (dict "class" "widget-social__link-icon") }}
+						{{ end }}
+						<span>{{ .service }}</span>
+					</a>
+				</div>
+			{{ end }}
 
-    <section class="main list" role="main">
-        <header class="main__header">
-            <h2 class="main__title widget__title">Publications</h2>
-        </header>
-        
-        {{ range .Paginator.Pages }}
-            {{ .Render "summary" }}
-        {{ end }}
-    </section>
+			{{ with $.Params.contact.email }}
+			<div class="widget-social__item widget__item">
+				<a class="widget-social__link widget__link btn"
+				   title="Email"
+				   href="mailto:{{ . }}">
+					{{ partial "svg/email.svg" (dict "class" "widget-social__link-icon") }}
+					<span>Email</span>
+				</a>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+	{{ end }}
+
+	<section class="main list" role="main">
+		<header class="main__header">
+			<h2 class="main__title widget__title">Publications</h2>
+		</header>
+
+		{{ range .Paginator.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</section>
 </article>
 
 {{ partial "pagination.html" . }}

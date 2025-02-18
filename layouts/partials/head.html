@@ -11,14 +11,14 @@
 
 {{- $server := "" }}
 {{- if gt (int (index (split hugo.Version ".") 1)) "120" }}
-    {{ $server = hugo.IsServer }}
+	{{ $server = hugo.IsServer }}
 {{- else }}
-    {{ $server = .Site.IsServer }}
+	{{ $server = .Site.IsServer }}
 {{- end -}}
 {{- if not $server }}
-    {{ template "_internal/google_analytics.html" . }}
+	{{ template "_internal/google_analytics.html" . }}
 {{- end }}
 
 {{ if .Site.Params.CustomHeadHTML }}
-    {{ .Site.Params.CustomHeadHTML | safeHTML }}
+	{{ .Site.Params.CustomHeadHTML | safeHTML }}
 {{ end }}
