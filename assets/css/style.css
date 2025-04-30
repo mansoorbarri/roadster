@@ -529,14 +529,15 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .js .menu__list {
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-	visibility: hidden;
-	-webkit-transform: scaleY(0);
-	transform: scaleY(0);
-	-webkit-transform-origin: top left;
-	transform-origin: top left;
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	visibility: visible;
+	border: 0;
+	-webkit-transform: none;
+	transform: none;
 }
 
 .js .menu__list--active {
