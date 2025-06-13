@@ -2,4 +2,4 @@ name = "roadster"
 compatibility_date = "2025-06-12"
 
 [assets]
-directory = "./public"
+directory = "./examplesite/public"
