@@ -8,5 +8,5 @@ routes = [
   { pattern = "roadster.mansoorbarri.com", custom_domain = true }
 ]
 
-[env.production.vars]
+[vars]
 HUGO_VERSION = "0.119.0"
