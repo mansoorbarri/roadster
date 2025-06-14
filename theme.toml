@@ -7,7 +7,7 @@ description = "A clean, content-first Hugo theme with modern publishing features
 homepage = "https://github.com/mansoorbarri/roadster"
 
 # If you have a running demo of the theme.
-demosite = "https://roadster-hugo.pages.dev/"
+demosite = "https://roadster.mansoorbarri.com/"
 
 tags = ["Blog", "Light", "Responsive"]
 features = ["blog", "responsive", "multilingual", "widgets", "rss", "disqus", "google analytics", "wordpress"]
