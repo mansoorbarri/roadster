@@ -7,6 +7,3 @@ directory = "./public"
 routes = [
   { pattern = "roadster.mansoorbarri.com", custom_domain = true }
 ]
-
-[vars]
-HUGO_VERSION = "0.144.0"
