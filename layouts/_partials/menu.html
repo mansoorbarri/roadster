@@ -1,0 +1,54 @@
+{{- define "submenu" }}
+  {{- if .HasChildren }}
+    <ul class="submenu">
+      {{- range .Children }}
+        <li class="submenu__item">
+          <a class="submenu__link" href="{{ .URL }}">{{ .Name }}</a>
+          {{ template "submenu" . }}
+        </li>
+      {{- end }}
+    </ul>
+  {{- end }}
+{{- end }}
+
+{{- if .Site.Menus.main }}
+<nav class="menu">
+  <button class="menu__btn" aria-label="Menu" aria-expanded="false">
+    <span class="menu__btn-line"></span>
+    <span class="menu__btn-line"></span>
+    <span class="menu__btn-line"></span>
+  </button>
+
+  <div class="menu__overlay"></div>
+
+  <ul class="menu__list desktop-menu">
+    {{- range .Site.Menus.main }}
+      {{- if not .Parent }}
+        <li class="menu__item">
+          <a class="menu__link{{ if .HasChildren }} has-submenu{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+          {{ template "submenu" . }}
+        </li>
+      {{- end }}
+    {{- end }}
+  </ul>
+
+  <div class="menu__drawer">
+    <div class="menu__drawer-header">
+      <span class="menu__drawer-title">Menu</span>
+      <button class="menu__close" aria-label="Close menu">
+        <span class="menu__close-icon">×</span>
+      </button>
+    </div>
+    <ul class="menu__list mobile-menu">
+      {{- range .Site.Menus.main }}
+        {{- if not .Parent }}
+          <li class="menu__item">
+            <a class="menu__link{{ if .HasChildren }} has-submenu{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+            {{ template "submenu" . }}
+          </li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+</nav>
+{{- end }}
