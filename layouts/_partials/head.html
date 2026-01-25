@@ -10,7 +10,7 @@
 {{- partial "head/stylesheet.html" . -}}
 
 {{- $server := "" }}
-{{- if gt (int (index (split hugo.Version ".") 1)) "120" }}
+{{- if gt (int (index (split hugo.Version ".") 1)) 120 }}
     {{ $server = hugo.IsServer }}
 {{- else }}
     {{ $server = .Site.IsServer }}
