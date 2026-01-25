@@ -3,7 +3,8 @@ title: Frequently asked questions (FAQ)
 description: Browse this FAQ page to find answers to frequently asked questions that have not been covered elsewhere in
   the documentation.
 date: 2022-01-24T14:00:00.000Z
-authorbox: false
+authors:
+  - "John Doe"
 sidebar: false
 pager: false
 weight: 3

@@ -6,7 +6,8 @@ lead: This article helps you get started with the Roadster theme, including inst
 date: 2025-01-08
 tags:
   - "Installation"
-authorbox: false
+authors:
+  - "John Doe"
 sidebar: false
 pager: false
 weight: 1

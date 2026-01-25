@@ -16,6 +16,11 @@ theme = "roadster"
   [services.disqus]
     shortname = 'your-disqus-shortname' # Enable Disqus by entering your Disqus shortname
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "authors"
+
 # Goldmark renders raw HTML mixed within the Markdown
 [markup.goldmark.renderer]
   unsafe = true # N.B. This is unsafe unless the content is under your control.  Set to false if you don't mix HTML with markdown.

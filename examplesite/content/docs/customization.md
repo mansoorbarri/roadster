@@ -4,12 +4,13 @@ description: Describes common Roadster theme configuration parameters that can b
   Matter section.
 lead: Describes common Roadster theme configuration parameters that can be adjusted via config file or via Front Matter
   section.
-date: 2025-01-06 
+date: 2025-01-06
 thumbnail:
   src: "img/placeholder.png"
   visibility:
     - list
-authorbox: false
+authors:
+  - "John Doe"
 sidebar: false
 pager: false
 weight: 2
@@ -89,6 +90,49 @@ multilingual sites should be careful and check that everything translates as exp
 You can also use a predefined layout, like `:date_full`, and it will output localized dates or times. For additional
 information about localized dates and possible date/time formatting layouts, please see
 [Hugo: time.Format](https://gohugo.io/functions/dateformat/).
+
+### Authorbox
+
+The authorbox displays author information at the bottom of posts. It uses Hugo's taxonomy system to link posts to authors.
+
+To set up the authorbox:
+
+1. **Add the `authors` taxonomy to `hugo.toml`:**
+
+    ```toml
+    [taxonomies]
+      category = "categories"
+      tag = "tags"
+      author = "authors"
+    ```
+
+2. **Create an author page** at `content/authors/<author-slug>/_index.md`:
+
+    ```yaml
+    ---
+    title: "John Doe"
+    bio: "Your bio here."
+    ---
+    ```
+
+3. **Add `authors` to each post's front matter:**
+
+    ```yaml
+    authors:
+      - "John Doe"
+    ```
+
+4. **(Optional)** Add a portrait image as `content/authors/<author-slug>/portrait.jpg` — it will be used as the avatar.
+
+5. **Don't set `authorbox: false`** in front matter (it's enabled by default).
+
+---
+
+To disable the authorbox on a specific page, add to the front matter:
+
+```yaml
+authorbox: false
+```
 
 ### Thumbnail visibility
 
