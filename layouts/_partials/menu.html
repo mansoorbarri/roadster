@@ -3,7 +3,7 @@
     <ul class="submenu">
       {{- range .Children }}
         <li class="submenu__item">
-          <a class="submenu__link" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="submenu__link{{ if .HasChildren }} has-submenu{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
           {{ template "submenu" . }}
         </li>
       {{- end }}
