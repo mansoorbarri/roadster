@@ -12,7 +12,7 @@
             </figure>
             <div class="authorbox__header">
                 <span class="authorbox__name">
-                    <a href="{{ $author.RelPermalink }}">About {{ $author.Title }}</a>
+                    <a href="{{ $author.RelPermalink }}">{{ i18n "authorbox_name" (dict "Name" $author.Title) }}</a>
                 </span>
             </div>
             {{- with $author.Params.bio }}
