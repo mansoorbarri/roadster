@@ -8,9 +8,9 @@ menu: main
 params:
   lead: Describes common Roadster theme configuration parameters that can be adjusted via config file or via Front Matter section.
   thumbnail:
-  src: "img/placeholder.png"
-  visibility:
-    - list
+    src: "img/placeholder.png"
+    visibility:
+      - list
   authors:
     - "John Doe"
   sidebar: false
