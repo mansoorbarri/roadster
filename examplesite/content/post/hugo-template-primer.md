@@ -1,8 +1,8 @@
 ---
 title: "(Hu)go Template Primer"
 date: 2014-04-02
-thumbnail: "img/placeholder.png"
 params:
+  thumbnail: "img/placeholder.png"
   authors:
     - "John Doe"
 tags:
