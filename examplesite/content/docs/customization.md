@@ -111,15 +111,17 @@ To set up the authorbox:
     ```yaml
     ---
     title: "John Doe"
-    bio: "Your bio here."
+    params:
+      bio: "Your bio here."
     ---
     ```
 
 3. **Add `authors` to each post's front matter:**
 
     ```yaml
-    authors:
-      - "John Doe"
+    params:
+      authors:
+        - "John Doe"
     ```
 
 4. **(Optional)** Add a portrait image as `content/authors/<author-slug>/portrait.jpg` — it will be used as the avatar.
@@ -131,7 +133,8 @@ To set up the authorbox:
 To disable the authorbox on a specific page, add to the front matter:
 
 ```yaml
-authorbox: false
+params:
+  authorbox: false
 ```
 
 ### Thumbnail visibility
@@ -150,11 +153,12 @@ Besides global configuration, you can change thumbnail visibility individually w
 front matter block.
 
 ```yaml
-thumbnail:
-  src: "img/placeholder.png"
-  visibility:
-    - list
-    - post
+params:
+  thumbnail:
+    src: "img/placeholder.png"
+    visibility:
+      - list
+      - post
 ```
 
 This page is an example of list-only thumbnail visibility.
@@ -192,10 +196,11 @@ The list of widgets can be overwritten from a page's front matter.
 
 ```yaml
 # Enable sidebar widgets in given order
-widgets:
-  - "search"
-  - "recent"
-  - "taglist"
+params:
+  widgets:
+    - "search"
+    - "recent"
+    - "taglist"
 ```
 
 Full list of available default widgets:
@@ -233,9 +238,7 @@ sections in the example below.
 
 ### Widget caching
 
-Sidebar strongly affects overall build time, especially if you are using all of our widgets or even more. Widget caching
-can significantly improve the generation time. Cached partials remain the same for all affected pages and are not
-generated multiple times by Hugo. All built-in widgets (`search`, `recent`, `categories`, `taglist`, `social`,
+Sidebar strongly affects overall build time, especially if you are using all of our widgets or even more. Widget caching can significantly improve the generation time. Cached partials remain the same for all affected pages and are not generated multiple times by Hugo. All built-in widgets (`search`, `recent`, `categories`, `taglist`, `social`,
 `languages`) support caching.
 
 Add `cached = true` inside the corresponding widget's dictionary table to activate caching. For example, to cache the
@@ -292,10 +295,7 @@ your site's root. The `icon` key filed, which is optional, should be a path rela
   icon = "youtube.svg"
 ```
 
-**Note:** *Only* SVG files are supported to be used as custom social icons. If you use any other files, PNG for example,
-a compile error will be raised by Hugo. Moreover, not every SVG icon can be used. For better results, it should be
-one-color SVG file with a special class attribute `{{ with .class }}{{ . }} {{ end }}` and 24x24 size. At a minimum,
-custom SVG icon needs these attributes:
+**Note:** *Only* SVG files are supported to be used as custom social icons. If you use any other files, PNG for example, a compile error will be raised by Hugo. Moreover, not every SVG icon can be used. For better results, it should be one-color SVG file with a special class attribute `{{ with .class }}{{ . }} {{ end }}` and 24x24 size. At a minimum, custom SVG icon needs these attributes:
 
 ```html
 <svg class="{{ with .class }}{{ . }} {{ end }} icon" width="24" height="24">...</svg>
