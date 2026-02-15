@@ -2,16 +2,17 @@
 title: Getting started
 description: This article helps you get started with the Roaster theme, including installation and minimal
   configuration.
-lead: This article helps you get started with the Roadster theme, including installation and minimal configuration.
 date: 2025-01-08
 tags:
   - "Installation"
-authors:
-  - "John Doe"
-sidebar: false
-pager: false
 weight: 1
 menu: main
+params:
+  lead: This article helps you get started with the Roadster theme, including installation and minimal configuration.
+  authors:
+    - "John Doe"
+  sidebar: false
+  pager: false
 ---
 
 Welcome to the Roadster theme documentation. This quick start guide covers Roadster theme installation and minimal configuration and is intended for intermediate to advanced users. To understand this guide, you need to be familiar with the [Hugo](https://gohugo.io/) static site generator.
