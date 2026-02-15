@@ -11,10 +11,10 @@ params:
   src: "img/placeholder.png"
   visibility:
     - list
-authors:
-  - "John Doe"
-sidebar: false
-pager: false
+  authors:
+    - "John Doe"
+  sidebar: false
+  pager: false
 ---
 
 Customization page describes common Roadster configuration parameters which can be specified via configuration file or
