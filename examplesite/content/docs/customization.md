@@ -2,10 +2,12 @@
 title: Customization
 description: Describes common Roadster theme configuration parameters that can be adjusted via config file or via Front
   Matter section.
-lead: Describes common Roadster theme configuration parameters that can be adjusted via config file or via Front Matter
-  section.
 date: 2025-01-06
-thumbnail:
+weight: 2
+menu: main
+params:
+  lead: Describes common Roadster theme configuration parameters that can be adjusted via config file or via Front Matter section.
+  thumbnail:
   src: "img/placeholder.png"
   visibility:
     - list
@@ -13,8 +15,6 @@ authors:
   - "John Doe"
 sidebar: false
 pager: false
-weight: 2
-menu: main
 ---
 
 Customization page describes common Roadster configuration parameters which can be specified via configuration file or
