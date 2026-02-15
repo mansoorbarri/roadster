@@ -3,14 +3,15 @@ title: Frequently asked questions (FAQ)
 description: Browse this FAQ page to find answers to frequently asked questions that have not been covered elsewhere in
   the documentation.
 date: 2022-01-24T14:00:00.000Z
-authors:
-  - "John Doe"
-sidebar: false
-pager: false
 weight: 3
 menu:
   main:
     name: FAQ
+params:
+  authors:
+    - "John Doe"
+  sidebar: false
+  pager: false
 ---
 
 Browse this FAQ page to find answers to frequently asked questions that have not been covered elsewhere
@@ -34,8 +35,7 @@ comprehensive.
 
 ### Do I need to use the extended version of Hugo?
 
-**No.** Roadster theme intentionally does not use any features of the extended version. As such, the extended version of
-Hugo is not required (but applicable).
+**No.** Roadster theme intentionally does not use any features of the extended version. As such, the extended version of Hugo is not required (but applicable).
 
 ### Is there a list of all possible configuration options?
 
@@ -120,9 +120,10 @@ required.
     ```
     ---
     title: Search
-    authorbox: false
-    sidebar: false
-    pager: false
+    params:
+      authorbox: false
+      sidebar: false
+      pager: false
     ---
     ```
 
