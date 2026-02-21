@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/mansoorbarri/roadster/issues"
   },
-  "homepage": "https://github.com/mansoorbarri/roadster"
+  "homepage": "https://github.com/mansoorbarri/roadster",
+  "overrides": {
+    "js-yaml": "4.1.1"
+  }
 }
