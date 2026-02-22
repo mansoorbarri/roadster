@@ -20,6 +20,9 @@
 		</div>
 		{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
 	</div>
+	<button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+		<span class="theme-toggle__label">Theme</span>
+	</button>
 <script async defer src="{{ "js/menu.js" | relURL }}"></script>
 {{ range .Site.Params.customJS -}}
 <script src="{{ . | relURL }}"></script>

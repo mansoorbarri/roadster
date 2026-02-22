@@ -15,8 +15,8 @@
 }
 
 .submenu {
-  background: #2a2a2a;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: var(--color-menu-bg);
+  box-shadow: 0 2px 5px var(--color-overlay-shadow);
   display: none;
   left: 0;
   list-style: none;
@@ -29,12 +29,12 @@
 }
 
 .submenu__item {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-menu-border);
   position: relative;
 }
 
 .submenu__link {
-  color: #fff;
+  color: var(--color-inverse-text);
   display: block;
   font-weight: 700;
   padding: 10px 15px;
@@ -45,7 +45,7 @@
 
 .submenu__link:hover {
   background: {{ $highlightColor }};
-  color: #fff;
+  color: var(--color-inverse-text);
 }
 
 .submenu .submenu {

@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
 <script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+<script>(function(w,d){var k="roadster-theme",t;try{t=w.localStorage.getItem(k);}catch(e){}if(t!=="dark"&&t!=="light"){t=w.matchMedia&&w.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}d.documentElement.setAttribute("data-theme",t);})(window,document);</script>
 
 {{- partial "head/seo.html" . -}}
 
