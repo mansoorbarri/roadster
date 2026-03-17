@@ -16,6 +16,10 @@ theme = "roadster"
   [services.disqus]
     shortname = 'your-disqus-shortname' # Enable Disqus by entering your Disqus shortname
 
+[permalinks]
+  [permalinks.term]
+    tags = '/:slug/'
+
 [taxonomies]
   category = "categories"
   tag = "tags"
